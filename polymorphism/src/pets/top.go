@@ -1,3 +1,5 @@
+// this is a project that I am experimenting with
+
 package main
 
 import "fmt"
@@ -44,6 +46,6 @@ func main() {
 	var c, d Communicate
 	c = NewCat("KC")
 	d = NewDog("Red")
-	c.Talk("meow")
-	d.Talk("woof")
+	c.Talk("meow meow meow mewo")
+	d.Talk("woof woof woof woof")
 }

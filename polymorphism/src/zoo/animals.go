@@ -31,3 +31,16 @@ func NewHippo (name string) *Hippo {
 func (h *Hippo) Talk(words string) {
 	fmt.Printf("Hippo named " + h.GetName() + " says " + words + "\n");
 }
+type Zebra struct {
+	base.Pet
+}
+
+func NewZebra (name string) *Zebra {
+	z := new(Zebra)
+	z.SetName(name)
+	return z
+}
+
+func (z *Zebra) Talk(words string) {
+	fmt.Printf("Zebra named " + z.GetName() + " says " + words + "\n");
+}

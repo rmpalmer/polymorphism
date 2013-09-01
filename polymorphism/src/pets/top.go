@@ -1,9 +1,8 @@
 // this is a project that I am experimenting with
-// and uppercase it.
 
 package main
 
-import "fmt"woof
+import "fmt"
 
 type Communicate interface {
 	Talk(words string)

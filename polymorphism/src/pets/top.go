@@ -1,8 +1,9 @@
 // this is a project that I am experimenting with
+// and uppercase it.
 
 package main
 
-import "fmt"
+import "fmt"woof
 
 type Communicate interface {
 	Talk(words string)
@@ -46,6 +47,6 @@ func main() {
 	var c, d Communicate
 	c = NewCat("KC")
 	d = NewDog("Red")
-	c.Talk("meow meow meow mewo")
-	d.Talk("woof woof woof woof")
+	c.Talk("meow MEOW")
+	d.Talk("woof WOOF")
 }

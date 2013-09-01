@@ -3,22 +3,17 @@
 
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"base"
+	"zoo"
+)
 
 type Communicate interface {
 	Talk(words string)
 }
-type Pet struct {
-	name string
-}
-func (p *Pet) SetName (name string) {
-	p.name = name
-}
-func (p *Pet) GetName () string {
-	return p.name
-}
 type Cat struct {
-	Pet
+	base.Pet
 }
 func NewCat (name string) *Cat {
 	c := new(Cat)
@@ -29,7 +24,7 @@ func (c *Cat) Talk(words string) {
 	fmt.Printf("Cat named " + c.GetName() + " says " + words + "\n");
 }
 type Dog struct {
-	Pet
+	base.Pet
 }
 func NewDog (name string) *Dog {
 	d := new(Dog)
@@ -44,9 +39,11 @@ func DoTalk(x Communicate, words string) {
 	x.Talk(words)
 }
 func main() {
-	var c, d Communicate
+	var c, d, g Communicate
 	c = NewCat("KC")
 	d = NewDog("Red")
+	g = zoo.NewGiraffe("Stretch")
 	c.Talk("meow MEOW")
 	d.Talk("woof WOOF")
+	g.Talk("nothing at all")
 }

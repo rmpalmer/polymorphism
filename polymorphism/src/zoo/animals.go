@@ -17,3 +17,17 @@ func NewGiraffe (name string) *Giraffe {
 func (g *Giraffe) Talk(words string) {
 	fmt.Printf("Giraffe named " + g.GetName() + " says " + words + "\n");
 }
+
+type Hippo struct {
+	base.Pet
+}
+
+func NewHippo (name string) *Hippo {
+	h := new(Hippo)
+	h.SetName(name)
+	return h
+}
+
+func (h *Hippo) Talk(words string) {
+	fmt.Printf("Hippo named " + h.GetName() + " says " + words + "\n");
+}

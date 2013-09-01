@@ -39,11 +39,13 @@ func DoTalk(x Communicate, words string) {
 	x.Talk(words)
 }
 func main() {
-	var c, d, g Communicate
+	var c, d, g, h Communicate
 	c = NewCat("KC")
 	d = NewDog("Red")
 	g = zoo.NewGiraffe("Stretch")
+	h = zoo.NewHippo("Tubby")
 	c.Talk("meow MEOW")
 	d.Talk("woof WOOF")
 	g.Talk("nothing at all")
+	h.Talk("grunt")
 }
